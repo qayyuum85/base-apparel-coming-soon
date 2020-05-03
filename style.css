@@ -1,8 +1,12 @@
 * {
   box-sizing: border-box;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 16px;
 }
 
-html, body {
+html,
+body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
@@ -16,6 +20,68 @@ div.main-container {
 }
 div.main-container > div.left {
   grid-area: left;
+}
+div.main-container > div.left div.login-container {
+  width: 400px;
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+div.main-container > div.left div.login-container > img {
+  margin-top: 10vh;
+}
+div.main-container > div.left div.login-container > div.header-1 {
+  margin-top: 12vh;
+  color: #ce9797;
+  font-weight: 200;
+  letter-spacing: 0.3em;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+div.main-container > div.left div.login-container > div.header-2 {
+  letter-spacing: 0.3em;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #413a3a;
+}
+div.main-container > div.left div.login-container > div.desc {
+  color: #ce9797;
+  margin-top: 2em;
+}
+div.main-container > div.left div.login-container > div.email {
+  margin-top: 2em;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+div.main-container > div.left div.login-container > div.email input {
+  line-height: 3;
+  border-radius: 20px;
+  width: 1%;
+  flex: 1 1 auto;
+  padding-left: 20px;
+  border: 1px solid #ce9797;
+  color: #ce9797;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+div.main-container > div.left div.login-container > div.email div {
+  margin-left: -15px;
+}
+div.main-container > div.left div.login-container > div.email div button {
+  height: 100%;
+  width: 80px;
+  border-radius: 20px;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  background-color: #f96262;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
 }
 div.main-container > div.right {
   grid-area: right;
