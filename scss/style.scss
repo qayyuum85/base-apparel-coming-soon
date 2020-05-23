@@ -163,12 +163,14 @@ div.main-container {
             justify-content: center;
 
             &>div.icon {
+                grid-area: icon;
                 img {
                     margin:5vh 0 5vh 5vw ;
                 }
             }
 
             &>div.right {
+                grid-area: right;
                 
                 img {
                     height:30vh;
@@ -177,6 +179,8 @@ div.main-container {
             }
 
             &>div.left {
+                grid-area: left;
+
                 div.login-container {
                     min-width: 375px;
                     width: 375px;
