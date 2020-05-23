@@ -1,3 +1,5 @@
+@import "./include-media";
+
 $desat-red: hsl(0, 36%, 70%);
 $soft-red: hsl(0, 93%, 68%);
 $dark-grey-red: hsl(0, 6%, 24%);
@@ -27,10 +29,21 @@ body {
 div.main-container {
     display: grid;
     grid-template-columns: 60% 40%;
-    grid-template-rows: 100vh;
+    grid-template-rows: 20vh 80vh;
     grid-template-areas:
+        "icon right"
         "left right";
 
+    &>div.icon {
+        grid-area: icon;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &>div {
+            width: 400px;
+        }
+    }
     &>div.left {
         grid-area: left;
 
@@ -69,6 +82,7 @@ div.main-container {
             &>div.email {
                 margin-top: 2em;
                 width: 100%;
+                position: relative;
                 display: flex;
                 flex-wrap: wrap;
                 align-items: stretch;
@@ -79,6 +93,7 @@ div.main-container {
                     width: 1%;
                     flex: 1 1 auto;
                     padding-left: 20px;
+                    padding-right: 60px;
                     border: 1px solid $desat-red;
                     color:$desat-red;
                     border-top-right-radius: 0;
@@ -96,8 +111,29 @@ div.main-container {
                         border: 0;
                         color: #fff;
                         cursor: pointer;
+                        box-shadow: 3px 10px 30px -5px $dark-grey-red;
                     }
-                } 
+
+                    button.invalid {
+                        background-image: $grad-1;
+                    }
+                }
+                
+                i {
+                    position: absolute;
+                    top: 1em;
+                    right: 100px;
+                    color: $soft-red;
+                    display: none;
+                }
+            }
+
+            &>div.error-msg {
+                display: none;
+                color:$soft-red;
+                padding-left: 20px;
+                padding-top:5px;
+                font-size: small;
             }
         }
     }
@@ -111,4 +147,50 @@ div.main-container {
         }
 
     }
+}
+
+@include media("<400px") {
+    html, body {
+        height: unset;
+        overflow: auto;
+
+        div.main-container {
+            grid-template-columns: 80vh;
+            grid-template-rows: auto;
+            grid-template-areas: "icon"
+            "right"
+            "left";
+            justify-content: center;
+
+            &>div.icon {
+                img {
+                    margin:5vh 0 5vh 5vw ;
+                }
+            }
+
+            &>div.right {
+                
+                img {
+                    height:30vh;
+                    margin-left: 10vw;
+                }
+            }
+
+            &>div.left {
+                div.login-container {
+                    min-width: 375px;
+                    width: 375px;
+                    align-items: center;
+
+                    &>div.desc,
+                    &>div.email {
+                        margin-left: 10vw;
+                        margin-right: 10vw;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    
 }

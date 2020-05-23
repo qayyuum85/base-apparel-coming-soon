@@ -11,16 +11,21 @@
             sizes="32x32"
             href="./images/favicon-32x32.png"
         />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="./scss/style.css" />
 
         <title>Frontend Mentor | Base Apparel coming soon page</title>
-        <script src="./index.js"></script>
+        <script src="https://kit.fontawesome.com/8d8e4d57d6.js" crossorigin="anonymous"></script>
+        <script src="./js/index.js"></script>
     </head>
     <body>
         <div class="main-container">
+            <div class="icon">
+                <div>
+                    <img src="./images/logo.svg" alt="Base Apparel Logo" />
+                </div>
+            </div>
             <div class="left">
                 <div class="login-container">
-                    <img src="./images/logo.svg" alt="Base Apparel Logo" />
                     <div class="header-1">We're</div>
                     <div class="header-2">coming</div>
                     <div class="header-2">soon</div>
@@ -30,10 +35,14 @@
                         stay up-to-date with announcements and our launch deals.
                     </div>
                     <div class="email">
-                        <input type="email" placeholder="Email Address">
+                        <input id="emailInput" type="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                         <div>
-                            <button type="button">></button>
+                            <button type="button" onclick="submit()">></button>
                         </div>
+                        <i class="fas fa-exclamation-circle error-msg"></i>
+                    </div>
+                    <div id="error-msg" class="error-msg">
+                        Please provide a valid email
                     </div>
                 </div>
             </div>
@@ -42,15 +51,15 @@
             </div>
         </div>
 
-        <!-- <footer>
+        <footer>
             <p class="attribution">
                 Challenge by
                 <a
                     href="https://www.frontendmentor.io?ref=challenge"
                     target="_blank"
                     >Frontend Mentor</a
-                >. Coded by <a href="#">Your Name Here</a>.
+                >. Coded by <a href="#">Qayyuum Harun</a>.
             </p>
-        </footer> -->
+        </footer>
     </body>
 </html>
