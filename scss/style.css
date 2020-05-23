@@ -1,0 +1,224 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+div.main-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  -ms-grid-rows: 20vh 80vh;
+      grid-template-rows: 20vh 80vh;
+      grid-template-areas: "icon right" "left right";
+}
+
+div.main-container > div.icon {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: icon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.main-container > div.icon > div {
+  width: 400px;
+}
+
+div.main-container > div.left {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: left;
+}
+
+div.main-container > div.left div.login-container {
+  width: 400px;
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+div.main-container > div.left div.login-container > img {
+  margin-top: 10vh;
+}
+
+div.main-container > div.left div.login-container > div.header-1 {
+  margin-top: 12vh;
+  color: #ce9797;
+  font-weight: 200;
+  letter-spacing: 0.3em;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+div.main-container > div.left div.login-container > div.header-2 {
+  letter-spacing: 0.3em;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #413a3a;
+}
+
+div.main-container > div.left div.login-container > div.desc {
+  color: #ce9797;
+  margin-top: 2em;
+}
+
+div.main-container > div.left div.login-container > div.email {
+  margin-top: 2em;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+div.main-container > div.left div.login-container > div.email input {
+  line-height: 3;
+  border-radius: 20px;
+  width: 1%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-left: 20px;
+  padding-right: 60px;
+  border: 1px solid #ce9797;
+  color: #ce9797;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+div.main-container > div.left div.login-container > div.email div {
+  margin-left: -15px;
+}
+
+div.main-container > div.left div.login-container > div.email div button {
+  height: 100%;
+  width: 80px;
+  border-radius: 20px;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  background-color: #f96262;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 10px 30px -5px #413a3a;
+          box-shadow: 3px 10px 30px -5px #413a3a;
+}
+
+div.main-container > div.left div.login-container > div.email div button.invalid {
+  background-image: linear-gradient(135deg, white, #fff5f5);
+}
+
+div.main-container > div.left div.login-container > div.email i {
+  position: absolute;
+  top: 1em;
+  right: 100px;
+  color: #f96262;
+  display: none;
+}
+
+div.main-container > div.left div.login-container > div.error-msg {
+  display: none;
+  color: #f96262;
+  padding-left: 20px;
+  padding-top: 5px;
+  font-size: small;
+}
+
+div.main-container > div.right {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: right;
+}
+
+div.main-container > div.right img {
+  height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 399px) {
+  html, body {
+    height: unset;
+    overflow: auto;
+  }
+  html div.main-container, body div.main-container {
+    -ms-grid-columns: 80vh;
+        grid-template-columns: 80vh;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "icon" "right" "left";
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  html div.main-container > div.icon, body div.main-container > div.icon {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: icon;
+  }
+  html div.main-container > div.icon img, body div.main-container > div.icon img {
+    margin: 5vh 0 5vh 5vw;
+  }
+  html div.main-container > div.right, body div.main-container > div.right {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: right;
+  }
+  html div.main-container > div.right img, body div.main-container > div.right img {
+    height: 30vh;
+    margin-left: 10vw;
+  }
+  html div.main-container > div.left, body div.main-container > div.left {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: left;
+  }
+  html div.main-container > div.left div.login-container, body div.main-container > div.left div.login-container {
+    min-width: 375px;
+    width: 375px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html div.main-container > div.left div.login-container > div.desc,
+  html div.main-container > div.left div.login-container > div.email, body div.main-container > div.left div.login-container > div.desc,
+  body div.main-container > div.left div.login-container > div.email {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
