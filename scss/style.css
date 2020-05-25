@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url(https://fonts.google.com/specimen/Josefin+Sans);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -170,11 +175,13 @@ div.main-container > div.right img {
 }
 
 @media (max-width: 399px) {
-  html, body {
+  html,
+  body {
     height: unset;
     overflow: auto;
   }
-  html div.main-container, body div.main-container {
+  html div.main-container,
+  body div.main-container {
     -ms-grid-columns: 80vh;
         grid-template-columns: 80vh;
     -ms-grid-rows: auto;
@@ -184,29 +191,35 @@ div.main-container > div.right img {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  html div.main-container > div.icon, body div.main-container > div.icon {
+  html div.main-container > div.icon,
+  body div.main-container > div.icon {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: icon;
   }
-  html div.main-container > div.icon img, body div.main-container > div.icon img {
+  html div.main-container > div.icon img,
+  body div.main-container > div.icon img {
     margin: 5vh 0 5vh 5vw;
   }
-  html div.main-container > div.right, body div.main-container > div.right {
+  html div.main-container > div.right,
+  body div.main-container > div.right {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: right;
   }
-  html div.main-container > div.right img, body div.main-container > div.right img {
+  html div.main-container > div.right img,
+  body div.main-container > div.right img {
     height: 30vh;
     margin-left: 10vw;
   }
-  html div.main-container > div.left, body div.main-container > div.left {
+  html div.main-container > div.left,
+  body div.main-container > div.left {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: left;
   }
-  html div.main-container > div.left div.login-container, body div.main-container > div.left div.login-container {
+  html div.main-container > div.left div.login-container,
+  body div.main-container > div.left div.login-container {
     min-width: 375px;
     width: 375px;
     -webkit-box-align: center;
@@ -214,7 +227,8 @@ div.main-container > div.right img {
             align-items: center;
   }
   html div.main-container > div.left div.login-container > div.desc,
-  html div.main-container > div.left div.login-container > div.email, body div.main-container > div.left div.login-container > div.desc,
+  html div.main-container > div.left div.login-container > div.email,
+  body div.main-container > div.left div.login-container > div.desc,
   body div.main-container > div.left div.login-container > div.email {
     margin-left: 10vw;
     margin-right: 10vw;

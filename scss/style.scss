@@ -12,6 +12,11 @@ $grad-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     text-transform: uppercase;
 }
 
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url(https://fonts.google.com/specimen/Josefin+Sans);
+}
+
 * {
     box-sizing: border-box;
     font-family: "Josefin Sans";
@@ -44,6 +49,7 @@ div.main-container {
             width: 400px;
         }
     }
+
     &>div.left {
         grid-area: left;
 
@@ -95,10 +101,11 @@ div.main-container {
                     padding-left: 20px;
                     padding-right: 60px;
                     border: 1px solid $desat-red;
-                    color:$desat-red;
+                    color: $desat-red;
                     border-top-right-radius: 0;
                     border-bottom-right-radius: 0;
                 }
+
                 div {
                     margin-left: -15px;
 
@@ -118,7 +125,7 @@ div.main-container {
                         background-image: $grad-1;
                     }
                 }
-                
+
                 i {
                     position: absolute;
                     top: 1em;
@@ -130,9 +137,9 @@ div.main-container {
 
             &>div.error-msg {
                 display: none;
-                color:$soft-red;
+                color: $soft-red;
                 padding-left: 20px;
-                padding-top:5px;
+                padding-top: 5px;
                 font-size: small;
             }
         }
@@ -150,7 +157,9 @@ div.main-container {
 }
 
 @include media("<400px") {
-    html, body {
+
+    html,
+    body {
         height: unset;
         overflow: auto;
 
@@ -158,22 +167,23 @@ div.main-container {
             grid-template-columns: 80vh;
             grid-template-rows: auto;
             grid-template-areas: "icon"
-            "right"
-            "left";
+                "right"
+                "left";
             justify-content: center;
 
             &>div.icon {
                 grid-area: icon;
+
                 img {
-                    margin:5vh 0 5vh 5vw ;
+                    margin: 5vh 0 5vh 5vw;
                 }
             }
 
             &>div.right {
                 grid-area: right;
-                
+
                 img {
-                    height:30vh;
+                    height: 30vh;
                     margin-left: 10vw;
                 }
             }
@@ -196,5 +206,5 @@ div.main-container {
             }
         }
     }
-    
+
 }
