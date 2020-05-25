@@ -94,6 +94,7 @@ div.main-container > div.left div.login-container > div.header-2 {
 div.main-container > div.left div.login-container > div.desc {
   color: #ce9797;
   margin-top: 2em;
+  line-height: 1.5em;
 }
 
 div.main-container > div.left div.login-container > div.email {
